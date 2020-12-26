@@ -1,3 +1,60 @@
+This is a node express app which can run a [Parse server](https://github.com/parse-community/parse-server) locally along with the [Parse Dashboard](https://github.com/parse-community/parse-dashboard).
+
+# Steps to run this project locally
+
+* Make sure you have at least Node 4.3. You can check your node version by running the following command in your terminal
+```
+node --version
+```
+
+* Make sure you have MongoDB installed locally. You can find instructions to install the free version of MongoDB here:
+[https://docs.mongodb.com/master/administration/install-community/](https://docs.mongodb.com/master/administration/install-community/)
+
+* Clone this repo
+```
+git clone https://github.com/baberarjumand/parse-server-example-with-dashboard
+```
+
+* Install the required dependencies
+```
+npm install
+```
+
+* Run the start script to start running the Parse server locally
+```
+npm start
+```
+
+* Navigate to [http://localhost:1337/test](http://localhost:1337/test). If the server is running, the test.html file should be served. You can click on Steps 1 and 2 on this file to ensure the database operations run successfully.
+
+* To access the Parse dashboard, navigate to [http://localhost:1337/dashboard](http://localhost:1337/dashboard). You should be able to see the objects created in the previous step under the GameScore collection.
+
+* Following are some basic cURL commands you can use for simple POST and GET operations
+
+```
+curl -X POST \
+-H "X-Parse-Application-Id: myAppId" \
+-H "Content-Type: application/json" \
+-d '{"score":123,"playerName":"Sean Plott 01","cheatMode":false}' \
+http://localhost:1337/parse/classes/GameScore
+```
+
+```
+curl -X GET \
+  -H "X-Parse-Application-Id: myAppId" \
+  http://localhost:1337/parse/classes/GameScore
+```
+
+```
+curl -X GET \
+  -H "X-Parse-Application-Id: myAppId" \
+  http://localhost:1337/parse/classes/GameScore/<INSERT YOUR OWN OBJECT ID HERE>
+```
+
+The following instructions are the ones given on the [parse-server-example](https://github.com/parse-community/parse-server-example) repo.
+
+---
+
 # parse-server-example
 
 [![Join The Conversation](https://img.shields.io/discourse/https/community.parseplatform.org/topics.svg)](https://community.parseplatform.org/c/parse-server)
