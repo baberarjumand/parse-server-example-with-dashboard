@@ -1,5 +1,8 @@
 This is a node express app which can run a [Parse server](https://github.com/parse-community/parse-server) locally along with the [Parse Dashboard](https://github.com/parse-community/parse-dashboard).
 
+This tutorial was used as a reference to set up the Parse dashboard:<br>
+[http://www.jlmonteagudo.com/2017/02/local-parse-server-ionic2-tutorial/](http://www.jlmonteagudo.com/2017/02/local-parse-server-ionic2-tutorial/)
+
 # Steps to run this project locally
 
 * Make sure you have at least Node 4.3. You can check your node version by running the following command in your terminal
