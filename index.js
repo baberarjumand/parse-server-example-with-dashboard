@@ -35,7 +35,7 @@ var dashboard = new ParseDashboard(
         serverURL: process.env.SERVER_URL || 'http://localhost:1337/parse', // Don't forget to change to https if needed
         appId: process.env.APP_ID || 'myAppId',
         masterKey: process.env.MASTER_KEY || 'myMasterKey', //Add your master key here. Keep it secret!
-        appName: 'PlaceApp',
+        appName: 'My Parse Server Example App',
       },
     ],
   },
